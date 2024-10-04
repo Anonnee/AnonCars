@@ -32,7 +32,8 @@ $sql = "CREATE TABLE IF NOT EXISTS cars (
     Price decimal(10,2) NOT NULL,
     ProductAddedBy varchar(50) NOT NULL DEFAULT 'Hrishikesh Kindre',
     CarStatus varchar(10) NOT NULL,
-    CarTrim varchar(30) NOT NULL
+    CarTrim varchar(30) NOT NULL,
+    last_updated TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 )";
 
 if ($conn->query($sql) === TRUE) {
